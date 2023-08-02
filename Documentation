@@ -1,0 +1,39 @@
+Documentation
+
+Welcome to the documentation for Your Utility Library. Below, you'll find details about each utility function and class included in the library along with usage examples.
+
+Reverse String Function:
+def reverse_string(input_string):
+    """
+    Reverse the given input_string.
+
+    Args:
+        input_string (str): The string to be reversed.
+
+    Returns:
+        str: The reversed string.
+    """
+    return input_string[::-1]
+
+
+Factorial Function:
+def factorial(n):
+    """
+    Compute the factorial of a non-negative integer n.
+
+    Args:
+        n (int): The non-negative integer for which to compute the factorial.
+
+    Returns:
+        int: The factorial of n.
+    """
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+
+
+[Add more utility functions and classes as needed]
+
+© 2023 Your Name. All rights reserved.
