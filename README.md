@@ -6,4 +6,4 @@ This utility library provides a collection of useful functions and classes to si
 
 Check out the Documentation and Examples to get started.
 
-© 2023 Your Name. All rights reserved.
+© 2023 Hamish Leahy. All rights reserved.
