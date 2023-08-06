@@ -1,0 +1,35 @@
+To fix the issue with the Windows scroll not working in Selenium WebDriver, you can try using the "ActionChains" class in Selenium. ActionChains allow you to perform advanced user interactions like scrolling, dragging, and hovering.
+
+Here's a Python code snippet to scroll down in Selenium WebDriver using ActionChains:
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+
+# Replace 'your_driver_path' with the actual path to your WebDriver executable (e.g., chromedriver.exe).
+driver = webdriver.Chrome(executable_path='your_driver_path')
+
+# Navigate to the desired webpage
+driver.get('https://www.example.com')
+
+# Define a function to scroll down
+def scroll_down():
+    actions = ActionChains(driver)
+    actions.send_keys(Keys.PAGE_DOWN).perform()
+
+# Call the scroll_down function to scroll once
+scroll_down()
+
+# You can call the function multiple times to scroll more than once, if needed.
+# scroll_down()
+# scroll_down()
+
+# Close the WebDriver
+driver.quit()
+```
+
+In this code, we use the "ActionChains" class to create an instance named "actions." Then, we use the "send_keys" method to send the "PAGE_DOWN" key to the webpage. This will simulate the action of pressing the "Page Down" key on the keyboard, which results in scrolling down the page.
+
+Remember to replace `'your_driver_path'` with the actual path to your WebDriver executable (e.g., chromedriver.exe). Also, make sure you have the latest version of Selenium WebDriver and the WebDriver executable for your preferred browser (e.g., Chrome, Firefox) downloaded and properly configured.
+
+By using the ActionChains class to simulate keyboard interactions, you should be able to overcome the issue of Windows scroll not working in Selenium WebDriver.
