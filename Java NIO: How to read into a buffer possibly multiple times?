@@ -1,0 +1,50 @@
+In Java NIO (New I/O), you can read data from a file or a channel into a buffer multiple times by using the `ByteBuffer` class. The `ByteBuffer` class provides methods to read data into the buffer and also to reset the buffer position and limit for subsequent reads. Here's how you can achieve this:
+
+1. **Create a ByteBuffer:**
+First, create a `ByteBuffer` with a suitable capacity to hold the data you want to read. The capacity should be large enough to accommodate the maximum amount of data you expect to read in a single read operation.
+
+```java
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+
+public class FileReadExample {
+    public static void main(String[] args) {
+        // Create a ByteBuffer with a capacity of 1024 bytes
+        ByteBuffer buffer = ByteBuffer.allocate(1024);
+        
+        // Path to the file you want to read
+        Path filePath = Paths.get("path/to/your/file.txt");
+        
+        // Open a FileChannel for reading
+        try (FileChannel channel = FileChannel.open(filePath, StandardOpenOption.READ)) {
+            // Read into the buffer
+            int bytesRead = channel.read(buffer);
+            // Process the data in the buffer (bytesRead contains the number of bytes read)
+            
+            // Reset the buffer position and limit to prepare for the next read
+            buffer.clear();
+            
+            // Read into the buffer again
+            bytesRead = channel.read(buffer);
+            // Process the data in the buffer (bytesRead contains the number of bytes read)
+            
+            // Continue reading and processing data as needed
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+2. **Read into the Buffer Multiple Times:**
+After the initial read into the buffer, you can process the data in the buffer and then reset the buffer's position and limit to prepare for the next read. This is done using `buffer.clear()`, which resets the buffer's position to 0 and the limit to the capacity, allowing it to be ready for the next read operation.
+
+3. **Continue Reading and Processing Data:**
+You can continue reading data from the file or channel into the buffer and processing it until you reach the end of the file or until you've read all the data you need.
+
+Remember to handle exceptions appropriately and close the `FileChannel` when you're done reading from the file.
+
+By using the `ByteBuffer` class and properly resetting the buffer after each read, you can read data from a file or channel into a buffer multiple times in Java NIO.
