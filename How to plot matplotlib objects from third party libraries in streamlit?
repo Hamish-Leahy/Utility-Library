@@ -1,0 +1,55 @@
+To plot Matplotlib objects from third-party libraries in Streamlit, you can use the `st.pyplot()` function provided by Streamlit. This function allows you to display Matplotlib figures directly within your Streamlit app.
+
+Here's a step-by-step guide on how to achieve this:
+
+1. **Install Required Libraries:**
+Make sure you have Streamlit and Matplotlib installed in your Python environment. You can install them using pip:
+```
+pip install streamlit matplotlib
+```
+
+2. **Import Libraries:**
+In your Python script or Streamlit app file, import the required libraries:
+```python
+import streamlit as st
+import matplotlib.pyplot as plt
+```
+
+3. **Create the Matplotlib Figure:**
+Use the third-party library to generate the Matplotlib figure. You can use any library that produces Matplotlib figures as output.
+
+```python
+import numpy as np
+
+# Example: Generate a simple Matplotlib figure using NumPy
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+fig, ax = plt.subplots()
+ax.plot(x, y)
+ax.set_xlabel('X-axis')
+ax.set_ylabel('Y-axis')
+ax.set_title('Sine Wave')
+```
+
+4. **Display the Figure in Streamlit:**
+Use the `st.pyplot()` function to display the Matplotlib figure within your Streamlit app.
+
+```python
+st.pyplot(fig)
+```
+
+5. **Run Your Streamlit App:**
+Save your script and run your Streamlit app using the `streamlit run` command in your terminal or command prompt.
+
+```bash
+streamlit run your_app.py
+```
+
+Now, when you access your Streamlit app in a web browser, you should see the Matplotlib figure displayed on the page.
+
+Note that `st.pyplot()` accepts a Matplotlib figure or any Matplotlib object (e.g., Axes, FigureCanvasTkAgg) as input. You can also use other Streamlit functions like `st.pyplot()` to display multiple plots, charts, or images in your app.
+
+Make sure that you have only one `st.pyplot()` call in your Streamlit app, as multiple calls may not work as expected due to Streamlit limitations.
+
+With this fix, you should be able to plot Matplotlib objects from third-party libraries in your Streamlit app successfully.
