@@ -1,0 +1,33 @@
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from cryptography.hazmat.backends import default_backend
+import os
+
+key = os.urandom(32) # Generate 256-bit key using os.urandom
+
+def encrypt(infile, outfile, key):
+  cipher = Cipher(algorithms.AES(key), modes.CBC(os.urandom(16)), backend=default_backend())
+  encryptor = cipher.encryptor()
+
+  with open(infile, 'rb') as f:
+    plaintext = f.read()
+
+  ciphertext = encryptor.update(plaintext) + encryptor.finalize()
+
+  with open(outfile, 'wb') as f:
+    f.write(ciphertext)
+
+def decrypt(infile, outfile, key):
+  cipher = Cipher(algorithms.AES(key), modes.CBC(os.urandom(16)), backend=default_backend())
+  decryptor = cipher.decryptor()
+
+  with open(infile, 'rb') as f:
+    ciphertext = f.read()
+
+  plaintext = decryptor.update(ciphertext) + decryptor.finalize()
+
+  with open(outfile, 'wb') as f: 
+    f.write(plaintext)
+
+
+encrypt('file.txt', 'file.enc', key) # Encrypt file
+decrypt('file.enc', 'decrypted.txt', key) # Decrypt file
