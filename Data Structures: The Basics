@@ -1,0 +1,24 @@
+Here is a general overview of common data structures in computer science:
+
+Data structures provide ways of organizing and storing data in a computer so that it can be accessed and modified efficiently. Different data structures are suited for different use cases. 
+
+**Arrays** - A collection of elements stored contiguously in memory. Easy access to elements by index, but adding/removing can be slow.
+
+**Linked Lists** - A sequential chain of nodes. Adding and removing is fast, but access by index is slow. Singly and doubly linked variants.
+
+**Stacks** - LIFO data structure. Adding/removing only at one end. Useful for undo/redo, browser history, etc.
+
+**Queues** - FIFO data structure. Adding at end, removing from front. Useful for task scheduling, BFS graph algorithms.
+
+**Trees** - Hierarchical data structure. Allows quick access to elements, while still maintaining overall structure. Variants like binary trees, heaps, tries.
+
+**Graphs** - Nodes connected by edges. Used to model relationships and connections. Directed vs undirected graphs.
+
+**Hash Tables** - Map keys to values for efficient lookup. Uses hash function to place elements for quick access.
+
+**Sets** - Collection of unique elements supporting operations like union and intersection. Can be implemented via hashing.
+
+**Priority Queues** - Specialized queue where elements have priorities. Higher priority elements dequeued first.
+
+Choosing the right data structure can give major efficiency benefits. Understanding the strengths of each allows selecting the best option.
+
