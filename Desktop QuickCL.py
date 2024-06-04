@@ -6,7 +6,7 @@ import shutil
 # Define the path for the desktop
 DESKTOP_PATH = os.path.expanduser("~/Desktop")
 
-# Define categories and their respective file extensions
+
 CATEGORIES = {
     'Images': ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff', '.ico'],
     'Documents': ['.pdf', '.doc', '.docx', '.xls', '.xlsx', '.ppt', '.pptx', '.txt', '.md', '.odt', '.ods'],
