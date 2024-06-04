@@ -1,5 +1,8 @@
 Encryption in Code: A Case Study
 
+
+
+
 Introduction
 
 Encryption is the process of encoding data or information in such a way that only authorized parties can access it. It is commonly used to protect sensitive information like passwords, financial data, personal communications etc. Encryption converts plaintext data into ciphertext that appears scrambled and unintelligible until decrypted with the proper key. It provides confidentiality, integrity and authentication for data.
