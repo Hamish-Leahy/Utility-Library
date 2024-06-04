@@ -1,4 +1,4 @@
-Python is a great language for implementing algorithms thanks to its simple syntax, rich built-in data structures like lists, dictionaries, and sets, and extensive libraries. 
+  Python is a great language for implementing algorithms thanks to its simple syntax, rich built-in data structures like lists, dictionaries, and sets, and extensive libraries. 
 Some common algorithms that are easy to implement in Python include:
 
 - Sorting algorithms like bubble sort, merge sort, and quicksort. These can be implemented recursively and by utilizing built-in methods like list.sort().
