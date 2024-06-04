@@ -2,7 +2,7 @@
 import os
 import shutil
 
-def cleanup_desktop(desktop_path, target_folders):
+def cleanup_desktop(desktop_path, target_folders):                        
     """
     Automates the cleanup process of the desktop by moving files to designated folders.
 
