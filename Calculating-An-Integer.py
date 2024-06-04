@@ -20,4 +20,5 @@ def factorial(n):
 
 # Example usage:
 # result = factorial(5)  # Calculates 5!
-# print(result)  # Output: 120
+
+
