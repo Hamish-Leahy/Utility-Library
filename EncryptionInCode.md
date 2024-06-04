@@ -1,5 +1,6 @@
 Here is a case study on using encryption in code:
 
+
 The Need for Encryption
 
 Ana is a web developer who recently launched an e-commerce site for her small business selling handmade crafts. The site requires customers to create an account and store payment information for future purchases. 
